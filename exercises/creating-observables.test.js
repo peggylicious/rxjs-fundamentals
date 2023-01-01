@@ -7,8 +7,10 @@ describe('Exercise: Creating Observables', () => {
      * the values into the `results` array, and get the expectation below to
      * pass.
      */
-    it.skip('should create an observable out of a single value', () => {
+    it('should create an observable out of a single value', () => {
       const result = [];
+      const observable$ = of(1)
+      observable$.subscribe(response => result.push(response))
 
       expect(result).toEqual([1]);
     });
